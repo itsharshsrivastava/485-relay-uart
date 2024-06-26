@@ -8,10 +8,10 @@ This project demonstrates how to use the Zephyr RTOS to control a 485 relay usin
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Connections](#connections)
 - [Usage](#usage)
 - [Files](#files)
 - [Configuration](#configuration)
-- [License](#license)
 
 ## Overview
 
@@ -51,6 +51,18 @@ The project initializes UART with specific settings and sends signals to control
     ```bash
     west flash
     ```
+## Connections
+# Between nRF52832 and 485 to TTL converter
+    nRF52832                    485 to TTL converter
+    VCC    --------------------->    VCC
+    GND    --------------------->    GND
+    RX     --------------------->    RXD
+    TX     --------------------->    TXD
+
+# Between 485 relay and 485 to TTL converter
+  485 relay                     485 to TTL converter
+    A+     --------------------->    A+
+    B-     --------------------->    B-
 
 ## Usage
 
@@ -75,8 +87,6 @@ These signals represent the control commands to turn the channels on and off.
 - `src/main.c`: Contains the main code for UART initialization and signal transmission.
 - `prj.conf`: Zephyr project configuration file.
 - `CMakeLists.txt`: CMake configuration file for building the project.
-
-## Configuration
 
 ### UART Configuration
 
