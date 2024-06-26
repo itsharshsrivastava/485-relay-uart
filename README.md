@@ -9,7 +9,6 @@ This project demonstrates how to use the Zephyr RTOS to control a 485 relay usin
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Connections](#connections)
-- [Usage](#usage)
 - [Files](#files)
 - [Configuration](#configuration)
 
@@ -20,7 +19,7 @@ The project initializes UART with specific settings and sends signals to control
 ## Features
 
 - Configures UART with a baud rate of 9600, no parity, 1 stop bit, and 8 data bits.
-- Sends specific hex codes to turn on and off channels connected via UART.
+- Sends specific hex codes to turn on and off relay channels connected via UART.
 - Includes small delays to ensure signal integrity.
 
 ## Requirements
@@ -60,16 +59,10 @@ The project initializes UART with specific settings and sends signals to control
     TX     --------------------->    TXD
 
 # Between 485 relay and 485 to TTL converter
-  485 relay                     485 to TTL converter
-    A+     --------------------->    A+
-    B-     --------------------->    B-
+    485 relay                     485 to TTL converter
+        A+     --------------------->    A+
+        B-     --------------------->    B-
 
-## Usage
-
-1. **Connect** the device to a UART-compatible device or monitor.
-2. **Power on** the board.
-3. The project will automatically start sending hex signals via UART to control the connected channels.
-4. Monitor the UART output to see the signals being sent.
 
 ### Signal Structure
 
