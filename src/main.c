@@ -41,11 +41,14 @@ int main(void)
 
 	/* Define the on and off signals to be sent via UART 
 	 	
-		signal = {1:deviceId, 
-                 2:"Write Single Coil" function,
-                 3,4: coil address,
-                 5,6: output value,
-                 7,8: Cyclic Redundancy Check for error detection}	*/
+		signal = {
+  		 1:deviceId/slaveID, 
+                 2:function ("Write Single Coil"-->0x05),
+                 3,4: coil address/channel number,
+                 5,6: coil state (0xFF00 --> ON and 0x0000 --> OFF),
+                 7,8: Cyclic Redundancy Check for error detection
+		}
+  	*/
 	
 	uint8_t on_signal1[8] = {0x01, 0x05, 0x00, 0x00, 0xFF, 0x00, 0x8C, 0x3A};		// hex code to turn on channel 1
 
