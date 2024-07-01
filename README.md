@@ -1,6 +1,6 @@
 # UART Control Project with Zephyr
 
-This project demonstrates how to use the Zephyr RTOS to control a 485 relay using a 485 to TTL converter. The project uses hex codes to send commands via UART to control two channels.
+This project demonstrates how to use the Zephyr RTOS to control a 485 relay using a 485 to TTL converter. The project uses hex codes to send commands via UART to control two channels. The code has been tested for nRF52832 along with commonly available auto flow control modbus RS485 to UART TTL converter, But it should work for other models with free UART pins.
 
 ## Table of Contents
 

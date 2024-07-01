@@ -1,4 +1,6 @@
 /build
 test.c
+test.exe
 modbus_api_nRF52832.c
 modbus_api_nRF52832.h
+.vscode
