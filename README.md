@@ -2,16 +2,6 @@
 
 This project demonstrates how to use the Zephyr RTOS to control a 485 relay using a 485 to TTL converter. The project uses hex codes to send commands via UART to control two channels.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Connections](#connections)
-- [Files](#files)
-- [Configuration](#configuration)
-
 ## Overview
 
 The project initializes UART with specific settings and sends signals to control two channels. The signals are sent in a loop to turn the channels on and off with predefined hex commands. This is useful for applications requiring repetitive control over UART.
@@ -32,11 +22,11 @@ The project initializes UART with specific settings and sends signals to control
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/zephyr-uart-control.git
+    git clone https://github.com/itsharshsrivastava/485-relay-uart.git
     ```
 2. **Navigate to the project directory**:
     ```bash
-    cd zephyr-uart-control
+    cd 485-relay-uart
     ```
 3. **Set up your Zephyr environment** following the [Zephyr Getting Started Guide](https://docs.zephyrproject.org/latest/getting_started/index.html).
 
